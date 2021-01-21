@@ -1,0 +1,55 @@
+<html>
+    <body>
+    <div class="container">
+    <form class="pull-left">
+    <span>Search by Employee name: </span>
+    <form class="form-group">
+    <input type='text' ng-model='searchName' placeholder='Type name to search' class="form-control">
+    </form>
+    </form>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+    <th>Name</th>
+    <th>Username</th> 
+    <th>email</th> 
+    <th>address</th>
+    <th>street</th>
+    <th>suite</th>
+    <th>city</th>
+    <th>zipcode</th>
+    <th>geo</th>
+    <th>lat</th>
+    <th>lng</th> 
+    <th>phone</th>
+    <th>website</th>
+    <th>company</th>
+    <th>name</th>
+    <th>catchPhrase</th>
+    <th>bs</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let user of users | paginate: { itemsPerPage: 15, currentPage: p } " >
+            <td> {{user.Name}} </td>
+            <td> {{user.username}} </td>
+            <td> {{user.address}} </td>
+            <td> {{user.street }} </td>
+            <td> {{user.suite}} </td>
+            <td> {{user.city}} </td>
+            <td> {{user.zipcode}} </td>
+            <td> {{user.geo}} </td>
+            <td> {{user.lat}} </td>
+            <td> {{user.lng}} </td>
+            <td> {{user.phone}} </td>
+            <td> {{user.website}} </td>
+            <td> {{user.company}} </td>
+            <td> {{user.catchPhrase}} </td>
+            <td> {{user.bs}} </td>
+    </tbody>
+    </table>
+    </div>
+    
+    </body>
+    <pagination-controls (pageChange)="p = $event"> </pagination-controls>
+    </html>
