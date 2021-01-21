@@ -1,0 +1,42 @@
+export class Users {
+    id:string;
+    Name:string;
+    username:string;
+    email:string;
+    address:string;
+    street:string;
+    suite:string;
+    city:string;
+    zipcode:Text;
+    geo:number;
+    lat:number;
+    lng:number;
+    phone:string;
+    website:string;
+    company:string;
+    name:string;
+    catchPhrase:string;
+    bs:string;
+
+    constructor(id,Name,username,email,address,street,suite,city,zipcode,geo,lat,lng,phone,website,company,name,catchPhrase,bs){
+        this.id=id;
+        this.Name=Name;
+        this.username=username;
+        this.email=email;
+        this.address=address;
+        this.street=street;
+        this.suite=suite;
+        this.city=city;
+        this.zipcode=zipcode;
+        this.geo=geo;
+        this.lat=lat;
+        this.lng=lng;
+        this.phone=phone;
+        this.website=website;
+        this.company=company;
+        this.name=name;
+        this.catchPhrase=catchPhrase;
+        this.bs=bs;
+    }
+}
+
